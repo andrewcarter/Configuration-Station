@@ -1,0 +1,15 @@
+ just found an alternative way of importing/exporting themes from Eclipse that is relatively easier (doesn't require manual editing of a file).
+
+Essentially there are two files we want to copy or overwrite:
+
+[workspace]\.metadata.plugins\org.eclipse.core.runtime.settings\org.eclipse.jdt.ui.prefs
+
+[workspace]\.metadata.plugins\org.eclipse.core.runtime.settings\org.eclipse.ui.editors.prefs
+
+(Side note: On Linux/Mac, the directory is [workspace]/.metadata/.plugins/org.eclipse.core.runtime/.settings/)
+
+where,
+
+org.eclipse.jdt.ui.prefs = Syntax Coloring
+
+org.eclipse.ui.editors.prefs = Text Editors

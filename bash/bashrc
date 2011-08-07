@@ -1,0 +1,17 @@
+# If not running interactively, don't do anything
+[[ "$-" != *i* ]] && return
+
+source ~/.bash_aliases
+source ~/.bash_functions
+
+# use .localrc for settings specific to one system
+if [ -f ~/.localrc ]; then
+  source ~/.localrc
+fi
+
+# Use case-insensitive filename globbing
+shopt -s nocaseglob
+
+# When changing directory small typos can be ignored by bash
+# for example, cd /vr/lgo/apaache would find /var/log/apache
+shopt -s cdspell
