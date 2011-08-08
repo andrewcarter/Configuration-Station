@@ -1,0 +1,43 @@
+# Local Configuration Below (Fill In required info [%])
+[user]
+	name = %NAME
+	email = %EMAIL
+[github]
+	user = %GITUSER
+	token = %GITTOKEN
+[merge]
+	tool = kdiff3	
+	keepBackup = false
+	trustExitCode = false
+[mergetool "kdiff3"]
+	path = %DIFFPATH
+[diff]
+	tool = kdiff3
+[difftool "kdiff3"]
+	path = %DIFFPATH
+	keepBackup = false
+	trustExitCode = false	
+
+# Generic Configuration
+[core]
+	autocrlf = input
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+[alias]
+	last = log -1 HEAD
+	c = commit -m
+	a = add
+	di = diff
+	dic = diff --cached
+	pl = pull
+	ps = push
+	plre = pull --rebase
+	st = status
+	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ci = commit
+	ca = commit --amend
+	rbc = rebase --continue
+	rbi = rebase -i
